@@ -11,7 +11,7 @@ class FuncgenClient
   def initialize(host, port)
     puts "Connecting..."
     begin
-      @socket = TCPSocket.new("127.0.0.1", 37846)
+      @socket = TCPSocket.new(host, port)
     rescue
       abort "Connection failed!"
     end
