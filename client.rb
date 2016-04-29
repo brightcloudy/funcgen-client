@@ -43,6 +43,8 @@ class FuncgenClient
 
   def handle_cmd(cmd)
     args = cmd.strip.downcase.split(' ')
+    args[0] = "ampl" if args[0] == "a"
+    args[0] = "freq" if args[0] == "f"
     case args[0]
       when "exit"
         exit
@@ -54,6 +56,7 @@ class FuncgenClient
         send_cmd "on"
       when "off"
         send_cmd "off"
+      when "f"
       when "freq"
         freqstr = args[1].split('.')
         format = "%.5i%.5i" % [freqstr[0].to_i, freqstr[1].to_i*10000]
