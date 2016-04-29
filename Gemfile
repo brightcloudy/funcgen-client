@@ -1,0 +1,6 @@
+source 'https://rubygems.org/'
+gem 'celluloid'
+gem 'celluloid-io'
+gem 'highline'
+gem 'byebug'
+gem 'ruby-progressbar'
